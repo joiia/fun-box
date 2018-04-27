@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Exo 2.0 Thin';
+    src: url('../../assets/fonts/Exo20-Thin.eot');
+    src: url('../../assets/fonts/Exo20-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/Exo20-Thin.woff') format('woff'),
+    url('../../assets/fonts/Exo20-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
