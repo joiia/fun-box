@@ -1,5 +1,7 @@
 @import "normalize.css";
 @import "_fonts";
+@import "_mixins";
 @import "_global";
 @import "_variables";
 @import "_main";
+@import "_product-card";

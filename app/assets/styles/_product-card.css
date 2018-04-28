@@ -1,0 +1,133 @@
+.product-card {
+    background: $blue;
+    padding: 20px 45px;
+    border-radius: 10px;
+    clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);
+    position: relative;
+    min-height: 450px;
+    cursor: pointer;
+    transition: all 300ms;
+    @mixin atLarge {
+        min-height: 480px;
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        border-radius: 8px;
+        clip-path: polygon(38px 0, 100% 0, 100% 100%, 0 100%, 0 38px);
+        width: calc(100% - 8px);
+        height: calc(100% - 8px);
+        background: url('../../assets/images/cat-large.png') no-repeat -35px 200px, #f2f2f2;
+        z-index: 1;
+    }
+    &__content {
+        position: relative;
+        z-index: 2;
+    }
+    &__title--small {
+        color: $grey-d;
+        margin-bottom: 5px;
+    }
+    &__title--approval {
+        color: $pink-l;
+        margin-bottom: 5px;
+    }
+    &__title--medium {
+        font-size: 1.3rem;
+        font-weight: bold;
+        @mixin atLarge {
+           font-size: 1.5rem;
+        }
+    }
+    &__title--large {
+        font-size: 2.6rem;
+        font-weight: bold;
+        @mixin atLarge {
+           font-size: 3rem;
+        }
+    }
+    &__features-list {
+        padding: 0;
+        font-size: 0.875rem;
+        li {
+            list-style: none;
+            color: $grey-d;
+            line-height: 1.15;
+        }
+    }
+    &__weight {
+        background: $blue;
+        color: #fff;
+        font-size: 1.3rem;
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        text-align: center;
+        padding: 15px;
+        line-height: 1;
+        position: absolute;
+        z-index: 3;
+        bottom: 15px;
+        right: 15px;
+        transition: all 300ms;
+        @mixin atLarge {
+            padding: 10px;
+        }
+        span {
+            font-size: 2.2rem;
+            display: block;
+            @mixin atLarge {
+               font-size: 2.625rem;
+            }
+        }
+        
+    }
+    &:not(.product-card--disabled):not(.product-card--selected):hover {
+        background: $blue-l;
+        .product-card__weight {
+                background: $blue-l;
+            }
+    }
+    &--selected {
+        background: $pink;
+        .product-card__weight {
+                background: $pink;
+            }
+        &:hover {
+            background: $pink-l;
+            .product-card__weight {
+                background: $pink-l;
+            }
+        }
+    }
+    &--disabled {
+        background: $grey;
+         .product-card__weight {
+                background: $grey;
+            }
+    }
+    
+}
+
+.product-description {
+	color: #fff;
+    text-align: center;
+    font-size: 0.81rem;
+    margin-top: 15px;
+    &__link {
+        color: $blue;
+        text-decoration: none;
+        border-bottom: 1px dashed $blue;
+        transition: all 300ms;
+        &:hover {
+            color: $blue-l;
+        }
+    }
+    &--disabled {
+        color: $yellow;
+    }
+}

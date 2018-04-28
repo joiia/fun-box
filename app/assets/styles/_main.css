@@ -1,6 +1,71 @@
-.main-page__title {
-    font-family: 'Exo 2.0 Thin';
-    color: #fff;
-    text-align: center;
-    font-size: 2.25rem;
+.main-section {
+    height: 100%;
+    &__wrapper {
+        height: 100%;
+        position: relative;
+    }
+    &__content {
+        padding: 0 15px;
+        width: 1150px;
+        max-width: 100%;
+        padding-top: 30px;
+        @mixin atLarge {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            padding: 0;
+        }
+    }
+    &__title {
+        font-family: 'Exo 2.0 Thin';
+        color: #fff;
+        text-align: center;
+        font-size: 2rem;
+        margin: 0 0 25px;
+        @mixin atMedium {
+            font-size: 2.25rem;
+        }
+    }
+    &__row {
+        margin: 0 -15px;
+        position: relative;
+        @mixin atMedium {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @mixin atLarge {
+            justify-content: space-between;
+        }
+    }
+    &__col {
+        padding: 0 15px;
+        max-width: 100%;
+        width: 350px;
+        margin: 0 auto;
+        @mixin atMedium {
+            margin: 0;
+        }
+        @mixin atLarge {
+            margin: 0;
+        }
+    }
+    &__col--medium-full {
+        @mixin atMedium {
+            width: 100%;
+        }
+        @mixin atLarge {
+            width: 350px;
+        }
+    }
+    &__item {
+        width: 320px;
+        max-width: 100%;
+        margin: 0 auto 35px;
+        @mixin atLarge {
+            width: 320px;
+            margin: 0 auto;
+        }
+    }
 }
