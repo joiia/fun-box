@@ -1,19 +1,26 @@
 .main-section {
-    height: 100%;
+    @mixin atLarge {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
     &__wrapper {
-        height: 100%;
-        position: relative;
+        @mixin atLarge {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            flex: 1 1 auto;
+            min-height: 0;
+        }
     }
     &__content {
-        padding: 0 15px;
+        padding: 30px 15px 10px;
         width: 1150px;
         max-width: 100%;
-        padding-top: 30px;
         @mixin atLarge {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
             padding: 0;
         }
     }
@@ -23,6 +30,7 @@
         text-align: center;
         font-size: 2rem;
         margin: 0 0 25px;
+        line-height: 1;
         @mixin atMedium {
             font-size: 2.25rem;
         }

@@ -4,7 +4,7 @@
     border-radius: 10px;
     clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);
     position: relative;
-    min-height: 450px;
+    min-height: 460px;
     cursor: pointer;
     transition: all 300ms;
     @mixin atLarge {
@@ -86,7 +86,7 @@
         }
         
     }
-    &:not(.product-card--disabled):not(.product-card--selected):hover {
+    &:not(.product-card--disabled):not(.product-card--selected):not(.no-hover):hover {
         background: $blue-l;
         .product-card__weight {
                 background: $blue-l;
@@ -97,7 +97,7 @@
         .product-card__weight {
                 background: $pink;
             }
-        &:hover {
+        &:not(.no-hover):hover {
             background: $pink-l;
             .product-card__weight {
                 background: $pink-l;
